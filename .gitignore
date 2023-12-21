@@ -13,3 +13,5 @@ env.bak/
 venv.bak/
 celerybeat-schedule
 *.DS_Store
+**/migrations/
+!**/migrations/__init__.py
