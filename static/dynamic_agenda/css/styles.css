@@ -1,0 +1,32 @@
+.collab_container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .collab_session {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .collab_time {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .collab_description {
+    color: #666;
+  }
+
+  @media (max-width: 600px) {
+    .collab_session {
+      flex-direction: column;
+    }
+  }

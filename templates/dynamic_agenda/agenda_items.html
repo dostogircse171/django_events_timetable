@@ -1,0 +1,14 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'dynamic_agenda/css/styles.css' %}">
+
+<div class="collab_container">
+  {% for item in items %}
+    <div class="collab_session">
+      <span class="collab_time">{{ item.time }}</span>
+      <span class="collab_description">{{ item.description }}</span>
+    </div>
+  {% empty %}
+    <p>No agenda items available.</p>
+  {% endfor %}
+</div>
