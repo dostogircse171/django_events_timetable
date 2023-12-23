@@ -3,12 +3,15 @@
 <link rel="stylesheet" href="{% static 'dynamic_agenda/css/styles.css' %}">
 
 <div class="collab_container">
+    {% if items %}
+        <h2 class="collab_group_title">{{ items.first.group.name }}</h2>
   {% for item in items %}
     <div class="collab_session">
       <span class="collab_time">{{ item.time }}</span>
       <span class="collab_description">{{ item.description }}</span>
     </div>
-  {% empty %}
+        {% endfor %}
+    {% else %}
     <p>No agenda items available.</p>
-  {% endfor %}
+    {% endif %}
 </div>
