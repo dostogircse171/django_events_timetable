@@ -1,5 +1,6 @@
+from django.db.models import Max
 from django import template
-from django_dynamic_agenda.models import AgendaItem
+from django_dynamic_agenda.models import AgendaItem, AgendaGroup
 
 register = template.Library()
 
