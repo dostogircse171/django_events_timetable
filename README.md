@@ -62,5 +62,6 @@ To display agenda items in your Django templates, first load the `dynamic_agenda
 1. To show the most recent group's items: `{% show_agenda %}`
 2. To show items from a specific group: `{% show_agenda "Group Name" %}` 
 *[Replace "Group Name" with your desired group's name. You can use this tag multiple times in a single template.]
+3. To limit the number of agenda display you can limit by passing  an additional parameter items_limit like `items_limit=1` here Number: 1 is the number of agenda you want to display.
 
 Note: You can use the show_agenda tag multiple times on the same page with different groups, or even with the same group, as needed. There is no limitation to the number of times it can be used. This flexibility allows you to tailor the display of agenda items to fit different sections or pages of your site.
