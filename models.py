@@ -5,12 +5,13 @@ class AgendaGroup(models.Model):
 
     def __str__(self):
         return self.name
-
-class AgendaItem(models.Model):
-    group = models.ForeignKey(AgendaGroup, on_delete=models.CASCADE, related_name='items')
-    time = models.DateField()
+class TimeTable(models.Model):
+    group = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='items')
+    start_time = models.TimeField(verbose_name="Time", help_text="When this will start")
     created = models.DateTimeField(auto_now_add=True)
-    description = models.TextField()
+    description = models.TextField(verbose_name="Event Description", help_text="Event activity/description what will happen at this time")
 
     def __str__(self):
-        return f"{self.time} - {self.description}"
+        return f"{self.start_time} - {self.description}"
+    class Meta:
+        ordering = ['start_time']
