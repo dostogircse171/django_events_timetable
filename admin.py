@@ -1,5 +1,17 @@
 from django.contrib import admin
-from .models import AgendaItem, AgendaGroup
+from .models import Event, TimeTable
 
-admin.site.register(AgendaItem)
-admin.site.register(AgendaGroup)
+@admin.register(Event)
+class EventAdmin(admin.ModelAdmin):
+    list_display = ('name', 'start_date', 'shortcode_display')
+    list_filter = ('start_date',)  
+    readonly_fields = ('shortcode_display',)
+    
+    def shortcode_display(self, obj):
+        return obj.generate_shortcode()
+    shortcode_display.short_description = "Display Tag"
+
+@admin.register(TimeTable)
+class TimeTableAdmin(admin.ModelAdmin):
+    list_display = ('group', 'start_time', 'created', 'description')
+    list_filter = ('group', 'start_time', 'created')
