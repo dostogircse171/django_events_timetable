@@ -23,7 +23,7 @@ class Event(models.Model):
     def __str__(self):
         return self.name
 class TimeTable(models.Model):
-    group = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='items')
+    item_event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='items', verbose_name="Event Name")
     start_time = models.TimeField(verbose_name="Time", help_text="When this will start")
     created = models.DateTimeField(auto_now_add=True)
     description = models.TextField(verbose_name="Event Description", help_text="Event activity/description what will happen at this time")

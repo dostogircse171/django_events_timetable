@@ -1,13 +1,13 @@
 {% load static %}
 <div class="dj_timetable_container">
     {% if items %}
-    <div class="dj_timetable_calendar {{ items.first.group.theme_color }}">
+    <div class="dj_timetable_calendar {{ items.first.item_event.theme_color }}">
         <div class="dj_timetable_calendar_header">
-            <h1 class="dj_timetable_header_title">{{ items.first.group.name }}</h1>
+            <h1 class="dj_timetable_header_title">{{ items.first.item_event.name }}</h1>
         </div>
         <div class="dj_timetable_calendar_events">
             <p class="dj_timetable_ce_title">Upcoming Event on 
-                <span class="dj_timetable_agenda_badge">{{ items.first.group.start_date }}</span> 
+                <span class="dj_timetable_agenda_badge">{{ items.first.item_event.start_date }}</span> 
                 in <span class="dj_timetable_agenda_badge">{{ days_until_event }}</span> days
             </p>
             {% for item in items %}
