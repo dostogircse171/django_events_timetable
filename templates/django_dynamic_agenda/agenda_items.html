@@ -1,15 +1,25 @@
 {% load static %}
-
-<div class="collab_container">
+<div class="dj_timetable_container">
     {% if items %}
-        <h2 class="collab_group_title">{{ items.first.group.name }}</h2>
-        {% for item in items %}
-            <div class="collab_session">
-                <span class="collab_time">{{ item.time }}</span>
-                <span class="collab_description">{{ item.description }}</span>
+    <div class="dj_timetable_calendar {{ items.first.group.theme_color }}">
+        <div class="dj_timetable_calendar_header">
+            <h1 class="dj_timetable_header_title">{{ items.first.group.name }}</h1>
+        </div>
+        <div class="dj_timetable_calendar_events">
+            <p class="dj_timetable_ce_title">Upcoming Event on 
+                <span class="dj_timetable_agenda_badge">{{ items.first.group.start_date }}</span> 
+                in <span class="dj_timetable_agenda_badge">{{ days_until_event }}</span> days
+            </p>
+            {% for item in items %}
+            <div class="dj_timetable_event_item">
+                <div class="dj_timetable_ei_Dot dj_timetable_dot_active"></div>
+                <div class="dj_timetable_ei_Title">{{ item.start_time|date:"g:i A" }}</div>
+                <div class="dj_timetable_ei_Copy">{{ item.description }}</div>
             </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
     {% else %}
-        <p>No agenda items available.</p>
+    <p>No agenda items available.</p>
     {% endif %}
 </div>
