@@ -1,7 +1,24 @@
 from django.db import models
+from django.forms import ValidationError
+from django.utils import timezone
+from datetime import timedelta
 
-class AgendaGroup(models.Model):
-    name = models.CharField(max_length=100, unique=True)
+class Event(models.Model):
+    LIGHT = 'dj_timetable_light'
+    DARK = 'dj_timetable_dark'
+
+    THEME_CHOICES = [
+        (LIGHT, 'Light'),
+        (DARK, 'Dark'),
+    ]
+
+    name = models.CharField(max_length=100, unique=True, verbose_name="Event Name")
+    start_date = models.DateField(help_text="Date when the Event is schedule for", verbose_name="Event Date")
+    theme_color = models.CharField(max_length=20, choices=THEME_CHOICES, default=LIGHT, verbose_name="Theme Color", help_text="How the event section will look when display on any page")
+    
+    def generate_shortcode(self):
+        """Generate a shortcode for template inclusion tag."""
+        return f'{{% show_agenda "{self.name}" %}}'
 
     def __str__(self):
         return self.name
