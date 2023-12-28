@@ -24,7 +24,8 @@ class Event(models.Model):
         return self.name
 class TimeTable(models.Model):
     item_event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='items', verbose_name="Event Name")
-    start_time = models.TimeField(verbose_name="Time", help_text="When this will start")
+    start_time = models.TimeField(verbose_name="Start Time", help_text="When this will start")
+    end_time = models.TimeField(verbose_name="End Time", help_text="When this will end", blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True)
     description = models.TextField(verbose_name="Event Description", help_text="Event activity/description what will happen at this time")
 

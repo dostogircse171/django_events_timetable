@@ -13,5 +13,5 @@ class EventAdmin(admin.ModelAdmin):
 
 @admin.register(TimeTable)
 class TimeTableAdmin(admin.ModelAdmin):
-    list_display = ('item_event', 'start_time', 'created', 'description')
-    list_filter = ('item_event', 'start_time', 'created')
+    list_display = ('item_event', 'start_time', 'end_time', 'created', 'description')
+    list_filter = ('item_event', 'start_time', 'end_time', 'created')
