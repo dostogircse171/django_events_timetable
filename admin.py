@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Event, TimeTable
+from django_events_timetable.models import Event, TimeTable
 
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):

@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
-class DynamicAgendaConfig(AppConfig):
-    name = 'django_dynamic_agenda'
+class DjangoEventTimetableConfig(AppConfig):
+    name = 'django_events_timetable'
     verbose_name = 'Events Timetable'
