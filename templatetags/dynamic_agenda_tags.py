@@ -6,7 +6,7 @@ from django_dynamic_agenda.models import TimeTable,Event
 register = template.Library()
 
 @register.inclusion_tag('django_dynamic_agenda/agenda_items.html')
-def show_agenda(group_name=None, items_limit=None):
+def show_agenda(event_name=None, items_limit=None):
     try:
         if items_limit:
             items_limit = int(items_limit)
@@ -15,9 +15,9 @@ def show_agenda(group_name=None, items_limit=None):
 
     days_until_event = None
 
-    if group_name:
+    if event_name:
         try:
-            event = Event.objects.get(name=group_name)
+            event = Event.objects.get(name=event_name)
             items = event.items.order_by('start_time')
             # Calculate days until the event
             delta = event.start_date - timezone.now().date()
