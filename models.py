@@ -6,15 +6,21 @@ from datetime import timedelta
 class Event(models.Model):
     LIGHT = 'dj_timetable_light'
     DARK = 'dj_timetable_dark'
+    CUSTOM = 'dj_timetable_custom'
 
     THEME_CHOICES = [
         (LIGHT, 'Light'),
         (DARK, 'Dark'),
+        (CUSTOM, 'Custom'),
     ]
 
     name = models.CharField(max_length=100, unique=True, verbose_name="Event Name")
     start_date = models.DateField(help_text="Date when the Event is schedule for.", verbose_name="Event Date")
     theme_color = models.CharField(max_length=20, choices=THEME_CHOICES, default=LIGHT, verbose_name="Theme Color", help_text="How the event section will look when display on any page")
+    #For Theme Color
+    primary_color = models.CharField(max_length=7, default='#FF8494', help_text="Primary color in hexadecimal or RGB or ColorName format (Eg. #FF8494 or rgb(23,23,12) or green/red/blue)", verbose_name="Primary Color")
+    background_color = models.CharField(max_length=7, default='#FFFFFF', help_text="Background color in hexadecimal or RGB or ColorName format (Eg. #FF8494 or rgb(23,23,12) or green/red/blue)", verbose_name="Background Color")
+    text_color = models.CharField(max_length=7, default='#000000', help_text="Text color in hexadecimal or RGB or ColorName format (Eg. #FF8494 or rgb(23,23,12) or green/red/blue)", verbose_name="Text Color")
     
     def generate_shortcode(self):
         """Generate a shortcode for template inclusion tag."""

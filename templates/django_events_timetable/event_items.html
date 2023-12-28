@@ -1,7 +1,23 @@
 {% load static %}
 <div class="dj_timetable_container">
     {% if items %}
-    <div class="dj_timetable_calendar {{ items.first.item_event.theme_color }}">
+    {% if items.first.item_event.theme_color == 'dj_timetable_custom' %}
+        <style type="text/css">
+            .{{ items.first.item_event.theme_color }}_{{items.first.item_event.id}}{
+                background: {{items.first.item_event.background_color}}
+            }
+            .{{ items.first.item_event.theme_color }}_{{items.first.item_event.id}} span.dj_timetable_agenda_badge,
+            .{{ items.first.item_event.theme_color }}_{{items.first.item_event.id}} .dj_timetable_dot_active,
+            .{{ items.first.item_event.theme_color }}_{{items.first.item_event.id}} .dj_timetable_event_item:hover
+            {
+                background: {{items.first.item_event.primary_color}};
+            }
+            .{{ items.first.item_event.theme_color }}_{{items.first.item_event.id}} *:not(span) {
+                color: {{items.first.item_event.text_color}};
+            }
+        </style>
+    {% endif %}
+    <div class="dj_timetable_calendar {{ items.first.item_event.theme_color }} {% if items.first.item_event.theme_color is not 'dj_timetable_custom'%}{{ items.first.item_event.theme_color }}_{{items.first.item_event.id}} {% endif %}">
         <div class="dj_timetable_calendar_header">
             <h1 class="dj_timetable_header_title">{{ items.first.item_event.name }}</h1>
         </div>
@@ -21,7 +37,6 @@
                     {% if item.end_time %}
                         - {{ item.end_time|date:"g:i A" }}
                     {% endif %}
-
                 </div>
                 <div class="dj_timetable_ei_Copy">{{ item.title }}</div>
             </div>
