@@ -6,10 +6,14 @@
             <h1 class="dj_timetable_header_title">{{ items.first.item_event.name }}</h1>
         </div>
         <div class="dj_timetable_calendar_events">
+            {% if days_until_event > 0 %}
             <p class="dj_timetable_ce_title">Upcoming Event on 
                 <span class="dj_timetable_agenda_badge">{{ items.first.item_event.start_date }}</span> 
                 in <span class="dj_timetable_agenda_badge">{{ days_until_event }}</span> days
             </p>
+        {% else %}
+            <p class="dj_timetable_ce_title">This Event <span class="dj_timetable_agenda_badge">Passed!</span></p>
+        {% endif %}        
             {% for item in items %}
             <div class="dj_timetable_event_item">
                 <div class="dj_timetable_ei_Dot dj_timetable_dot_active"></div>

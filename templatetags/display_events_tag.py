@@ -1,12 +1,12 @@
 from django.utils import timezone
 from django.db.models import Max
 from django import template
-from django_dynamic_agenda.models import TimeTable,Event
+from django_events_timetable.models import TimeTable,Event
 
 register = template.Library()
 
-@register.inclusion_tag('django_dynamic_agenda/agenda_items.html')
-def show_agenda(event_name=None, items_limit=None):
+@register.inclusion_tag('django_events_timetable/event_items.html')
+def display_event(event_name=None, items_limit=None):
     try:
         if items_limit:
             items_limit = int(items_limit)
