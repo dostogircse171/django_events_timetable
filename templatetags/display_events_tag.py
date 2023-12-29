@@ -2,6 +2,7 @@ from django.utils import timezone
 from django.db.models import Max
 from django import template
 from django_events_timetable.models import TimeTable,Event
+from django_events_timetable.utils import days_to_date
 
 register = template.Library()
 
@@ -20,8 +21,10 @@ def display_event(event_name=None, items_limit=None):
             event = Event.objects.get(name=event_name)
             items = event.items.order_by('start_time')
             # Calculate days until the event
-            delta = event.start_date - timezone.now().date()
-            days_until_event = max(delta.days, 0)
+            days_until_event = days_to_date(event.start_date)
+            is_negative = days_until_event<0
+            if is_negative:
+                days_until_event = abs(days_until_event)
         except Event.DoesNotExist:
             items = TimeTable.objects.none()
     else:
@@ -32,12 +35,14 @@ def display_event(event_name=None, items_limit=None):
         if latest_event:
             items = latest_event.items.all().order_by('start_time')
             # Calculate days until the event
-            delta = latest_event.start_date - timezone.now().date()
-            days_until_event = max(delta.days, 0)
+            days_until_event = days_to_date(latest_event.start_date)
+            is_negative = days_until_event<0
+            if is_negative:
+                days_until_event = abs(days_until_event)
         else:
             items = TimeTable.objects.none()
 
     if items_limit:
         items = items[:items_limit]
 
-    return {'items': items, 'days_until_event': days_until_event}
+    return {'items': items, 'days_until_event': days_until_event, "is_negative":is_negative}
