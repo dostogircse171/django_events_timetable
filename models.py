@@ -27,6 +27,7 @@ class Event(models.Model):
         return f'{{% display_event "{self.id}" %}}'
 
     def __str__(self):
+        return f"{self.name} - {self.start_date.strftime('%Y-%m-%d')}"
 
     class Meta:
         unique_together = [('name', 'start_date')]
