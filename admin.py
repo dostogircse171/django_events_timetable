@@ -5,7 +5,7 @@ from django_events_timetable.forms import EventAdminForm, TimeTableAdminForm
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
     form = EventAdminForm
-    list_display = ('name', 'start_date', 'id', 'shortcode_display')
+    list_display = ('id', 'name', 'start_date', 'shortcode_display')
     list_filter = ('start_date',)  
     readonly_fields = ('shortcode_display',)
     
