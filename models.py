@@ -14,7 +14,7 @@ class Event(models.Model):
         (CUSTOM, 'Custom'),
     ]
 
-    name = models.CharField(max_length=100, unique=True, verbose_name="Event Name")
+    name = models.CharField(max_length=100, verbose_name="Event Name")
     start_date = models.DateField(help_text="Date when the Event is schedule for.", verbose_name="Event Date")
     theme_color = models.CharField(max_length=20, choices=THEME_CHOICES, default=LIGHT, verbose_name="Theme Color", help_text="How the event section will look when display on any page")
     #For Theme Color
