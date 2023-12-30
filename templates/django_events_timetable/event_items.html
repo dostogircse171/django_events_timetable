@@ -23,7 +23,7 @@
         </div>
         <div class="dj_timetable_calendar_events">
             {% if is_negative %}
-                <p class="dj_timetable_ce_title">Event held on 
+                <p class="dj_timetable_ce_title event_held">Event held on 
                     <span class="dj_timetable_agenda_badge">{{ items.first.item_event.start_date }}</span>,
                     <span class="dj_timetable_agenda_badge">{{ days_until_event }}</span> days ago
                 </p>                
@@ -36,7 +36,7 @@
             {% for item in items %}
                         <div class="dj_timetable_event_item">
                 <div class="dj_timetable_ei_Dot dj_timetable_dot_active"></div>
-                <div class="dj_timetable_ei_Title">{{ item.start_time|date:"g:i A" }}
+                <div class="dj_timetable_ei_Title event_held_{{is_negative}}">{{ item.start_time|date:"g:i A" }}
                     {% if item.end_time %}
                         - {{ item.end_time|date:"g:i A" }}
                     {% endif %}
