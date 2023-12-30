@@ -47,6 +47,10 @@
         </div>
     </div>
     {% else %}
-    <p>No agenda items available.</p>
+    <p>Events not available
+    {% if message %}
+    (Note: {{message}})
+    {% endif%}
+</p>
     {% endif %}
 </div>
