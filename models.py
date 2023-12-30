@@ -27,7 +27,9 @@ class Event(models.Model):
         return f'{{% display_event "{self.name}" %}}'
 
     def __str__(self):
-        return self.name
+
+    class Meta:
+        unique_together = [('name', 'start_date')]
 class TimeTable(models.Model):
     item_event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='items', verbose_name="Event Name")
     start_time = models.TimeField(verbose_name="Start Time", help_text="When this will start")
