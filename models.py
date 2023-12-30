@@ -24,7 +24,7 @@ class Event(models.Model):
     
     def generate_shortcode(self):
         """Generate a shortcode for template inclusion tag."""
-        return f'{{% display_event "{self.name}" %}}'
+        return f'{{% display_event "{self.id}" %}}'
 
     def __str__(self):
 
