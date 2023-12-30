@@ -8,13 +8,14 @@ register = template.Library()
 
 @register.inclusion_tag('django_events_timetable/event_items.html')
 def display_event(event_name=None, items_limit=None):
+    days_until_event = None
+    is_negative = False
+    
     try:
         if items_limit:
             items_limit = int(items_limit)
     except ValueError:
         items_limit = None
-
-    days_until_event = None
 
     if event_name:
         try:
