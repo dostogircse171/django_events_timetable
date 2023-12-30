@@ -1,7 +1,7 @@
 from django.utils import timezone
 from django.db.models import Max
 from django import template
-from django_events_timetable.models import TimeTable,Event
+from django_events_timetable.models import TimeTable, Event
 from django_events_timetable.utils import days_to_date
 
 register = template.Library()
