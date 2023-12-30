@@ -1,7 +1,4 @@
 from django.db import models
-from django.forms import ValidationError
-from django.utils import timezone
-from datetime import timedelta
 
 class Event(models.Model):
     LIGHT = 'dj_timetable_light'
@@ -14,7 +11,7 @@ class Event(models.Model):
         (CUSTOM, 'Custom'),
     ]
 
-    name = models.CharField(max_length=100, unique=True, verbose_name="Event Name")
+    name = models.CharField(max_length=100, verbose_name="Event Name")
     start_date = models.DateField(help_text="Date when the Event is schedule for.", verbose_name="Event Date")
     theme_color = models.CharField(max_length=20, choices=THEME_CHOICES, default=LIGHT, verbose_name="Theme Color", help_text="How the event section will look when display on any page")
     #For Theme Color
@@ -24,10 +21,13 @@ class Event(models.Model):
     
     def generate_shortcode(self):
         """Generate a shortcode for template inclusion tag."""
-        return f'{{% display_event "{self.name}" %}}'
+        return f'{{% display_event "{self.id}" %}}'
 
     def __str__(self):
-        return self.name
+        return f"{self.name} - {self.start_date.strftime('%Y-%m-%d')}"
+
+    class Meta:
+        unique_together = [('name', 'start_date')]
 class TimeTable(models.Model):
     item_event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='items', verbose_name="Event Name")
     start_time = models.TimeField(verbose_name="Start Time", help_text="When this will start")

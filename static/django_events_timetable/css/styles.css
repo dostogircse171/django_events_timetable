@@ -106,3 +106,11 @@ span.dj_timetable_agenda_badge {
   padding-top: 2px;
   padding-bottom: 2px;
 }
+.dj_timetable_container .event_held{
+  background: #dadada;
+  border-radius: 10px;
+  border: 1px solid #5a5a5a;
+}
+.dj_timetable_container .event_held_True{
+  text-decoration: line-through;
+}
