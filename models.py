@@ -1,7 +1,4 @@
 from django.db import models
-from django.forms import ValidationError
-from django.utils import timezone
-from datetime import timedelta
 
 class Event(models.Model):
     LIGHT = 'dj_timetable_light'
