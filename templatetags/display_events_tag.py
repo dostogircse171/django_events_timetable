@@ -6,6 +6,12 @@ from django_events_timetable.utils import days_to_date
 
 register = template.Library()
 
+def calculate_days_until_event(event):
+    """ Calculate days until the event and check if it's negative. """
+    days_until_event = days_to_date(event.start_date)
+    is_negative = days_until_event < 0
+    return abs(days_until_event) if is_negative else days_until_event, is_negative
+
 @register.inclusion_tag('django_events_timetable/event_items.html')
 def display_event(event_name=None, items_limit=None):
     days_until_event = None
