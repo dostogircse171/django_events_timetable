@@ -111,27 +111,27 @@ span.dj_timetable_agenda_badge {
 }
 
 /*== start of style for tooltips ==*/
-.tool {
+.dj_timetable_container .tool {
   cursor: help;
   position: relative;
 }
-.tool::before,
-.tool::after {
+.dj_timetable_container .tool::before,
+.dj_timetable_container .tool::after {
   left: 50%;
   opacity: 0;
   position: absolute;
   z-index: -100;
 }
 
-.tool:hover::before,
-.tool:focus::before,
-.tool:hover::after,
-.tool:focus::after {
+.dj_timetable_container .tool:hover::before,
+.dj_timetable_container .tool:focus::before,
+.dj_timetable_container .tool:hover::after,
+.dj_timetable_container .tool:focus::after {
   opacity: 1;
   transform: scale(1) translateY(0);
   z-index: 100; 
 }
-.tool::before {
+.dj_timetable_container .tool::before {
   border-style: solid;
   border-width: 1em 0.75em 0 0.75em;
   border-color: #3E474F transparent transparent transparent;
@@ -141,11 +141,11 @@ span.dj_timetable_agenda_badge {
   transition: all .65s cubic-bezier(.84,-0.18,.31,1.26), opacity .65s .5s;
   transform:  scale(.6) translateY(-90%);
 } 
-.tool:hover::before,
-.tool:focus::before {
+.dj_timetable_container .tool:hover::before,
+.dj_timetable_container .tool:focus::before {
   transition: all .65s cubic-bezier(.84,-0.18,.31,1.26) .2s;
 }
-.tool::after {
+.dj_timetable_container .tool::after {
   background: #3e474fe8;
   border-radius: 0.25em;
   bottom: 130%;
@@ -158,7 +158,7 @@ span.dj_timetable_agenda_badge {
   width: 17.5em;
 }
 
-.tool:hover::after,
-.tool:focus::after  {
+.dj_timetable_container .tool:hover::after,
+.dj_timetable_container .tool:focus::after  {
   transition: all .65s cubic-bezier(.84,-0.18,.31,1.26);
 }
