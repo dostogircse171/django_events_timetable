@@ -1,4 +1,3 @@
-# my_events_app/cms_plugins.py
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from django.utils.translation import gettext_lazy as _
@@ -15,6 +14,5 @@ class EventPluginPublisher(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         context = super().render(context, instance, placeholder)
-        # Use your existing template tag logic here
         context.update(display_event(event_id=instance.event.id))
         return context

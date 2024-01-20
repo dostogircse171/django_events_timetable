@@ -41,7 +41,7 @@ class TimeTable(models.Model):
     class Meta:
         ordering = ['start_time']
 
-
+# Specific for Django CMS
 try:
     from cms.models.pluginmodel import CMSPlugin
     CMS_IS_INSTALLED = True
