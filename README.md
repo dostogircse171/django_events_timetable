@@ -7,6 +7,11 @@ Django Events Timetable, is a valuable addition for any Django-based project, pa
 ![Logo](https://i.ibb.co/vXV3Pfd/Screenshot-2024-01-20-at-1-17-15-am.png)
 ## Seamlessly integrate with both Django CMS and Wagtail to supercharge your content management experience.
 ![Logo](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*HrFLJCXTQrknxtdO2M6bMA.png)
+## Authors
+
+- [@dostogircse171](https://www.github.com/dostogircse171)
+- [@amitmodi06](https://www.github.com/amitmodi06)
+
 ## Features
 
 - Easy integration with Django projects, Django CMS or Wagtail CMS.
@@ -88,3 +93,12 @@ To display agenda items in your Django templates, first load the `dynamic_agenda
 #### 2.3.2 To show items from a specific event: `{% display_event "Event ID" %}` [This auto generates and can be copied from Events table "Display Tag"] ***[Replace "Event ID" with your specific event ID. You can use this tag multiple times in a single template as needed.]***
 
 #### 2.3.3. To limit the number of event items displayed you can limit by passing  an additional parameter items_limit like `items_limit=1` here Number: 1 is the number of event item you want to display.
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+## Contributing
+
+Contributions & ideas are always welcome! Please create an issue first before contributing so we can confirm if that is necessery or if someone else is already working on it. 
+
