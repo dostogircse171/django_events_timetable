@@ -9,8 +9,8 @@ Django Events Timetable is an app component offering easy integration with Djang
 ![Logo](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*HrFLJCXTQrknxtdO2M6bMA.png)
 
 ## Authors
-- Mohammad Golam Dostogir - [dostogircse171@domain.com](mailto:dostogircse171@domain.com)
-- Amit Kumar - [amitmodi06@domain.com](mailto:amitmodi06@domain.com)
+- Mohammad Golam Dostogir - [contact@dostogir.dev](mailto:contact@dostogir.dev)
+- Amit Kumar - [amitmodi06@gmail.com](mailto:mailto:amitmodi06@gmail.com)
 
 ## Features
 
