@@ -18,15 +18,15 @@ Django Events Timetable is an app component offering easy integration with Djang
 - Placeholder Plugin for Django CMS.
 - Easy to Manage event items through Django admin or Wagtail CMS or Django CMS.
 - Grouping of event items for different events or pages.
-- Customizable display templates with 2 default Dark and Light design.
-- Easy colorpicker for custom design.
-- Responsive and clean design will fit any project without effecting exisiting CSS ot HTML design. 
-- The app is extendable and custimizable as needed.
+- Customizable display templates with 2 default Dark and Light designs.
+- Easy color picker for custom design.
+- Responsive and clean design will fit any project without affecting existing CSS or HTML design. 
+- The app is extendable and custiomizable as needed.
 
 
 ## 1. Installation
 
-**1.1 Download/Clone the app repository to your django project directory**
+**1.1 Download/Clone the app repository to your Django project directory**
 ```bash
   git clone https://github.com/dostogircse171/django_events_timetable.git
 ```
@@ -72,16 +72,16 @@ Add the following line to the `<head>` section of your base template (e.g., `bas
 ![wagtail](https://img001.prntscr.com/file/img001/SDQ3ZlX-SSuXHIfNSLn2SA.png)
 
 **2.2 Making Events:**
-To display an event and it's timetable content you need to create an event first. Consider this event as a `Group` and under this event group you can add as many event timetable as needed. Once you create an Events it will autogenerate a template tag for example `{% display_event "ID" %}` 
+To display an event and its timetable content you need to create an event first. Consider this event as a `Group` and under this event group you can add as many event timetables as needed. Once you create an Events it will autogenerate a template tag for example `{% display_event "ID" %}` 
 
 ![wagtail](https://i.ibb.co/WggFkwV/events-model-demo.gif)
 
 **2.3 Events TimeTable:**
-After you add events now need to add timetable under that event. For that you need to add timetable data and select appropriate events.
+After adding an event, you need to add the timetable under that event. For that, you need to add timetable data and select appropriate events.
 
 ![wagtail](https://i.ibb.co/5R4L0tj/timetable-model-demo.gif)
 
-**2.3 Displaying the Event:** To display the event in your templates, the app provides custom Django template tags for easy integration. For Django CMS the app provide Plugin Placeholder to drag and drop events into template.
+**2.3 Displaying the Event:** To display the event in your templates, the app provides custom Django template tags for easy integration. For Django CMS the app provides a Plugin Placeholder to drag and drop events into the template.
 
 To display agenda items in your Django templates, first load the `dynamic_agenda` template tags: 
 ```html
@@ -90,7 +90,7 @@ To display agenda items in your Django templates, first load the `dynamic_agenda
 ***Note: This is not required for Django CMS***
 
 #### 2.3.1. To show the most recent event's items: `{% display_event %}`
-#### 2.3.2 To show items from a specific event: `{% display_event "Event ID" %}` [This auto generates and can be copied from Events table "Display Tag"] ***[Replace "Event ID" with your specific event ID. You can use this tag multiple times in a single template as needed.]***
+#### 2.3.2 To show items from a specific event: `{% display_event "Event ID" %}` [This auto generates and can be copied from the "Display Tag" field of Events table] ***[Replace "Event ID" with your specific event ID. You can use this tag multiple times in a single template as needed.]***
 
 #### 2.3.3. To limit the number of event items displayed you can limit by passing  an additional parameter items_limit like `items_limit=1` here Number: 1 is the number of event item you want to display.
 
@@ -104,5 +104,5 @@ To display agenda items in your Django templates, first load the `dynamic_agenda
 
 ## Contributing
 
-Contributions & ideas are always welcome! Please create an issue first before contributing so we can confirm if that is necessery or if someone else is already working on it. 
+Contributions & ideas are always welcome! Please create an issue first before contributing so we can confirm if that is necessary or if someone else is already working on it. 
 
