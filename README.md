@@ -7,10 +7,10 @@ Django Events Timetable is an app component offering easy integration with Djang
 ![Logo](https://i.ibb.co/vXV3Pfd/Screenshot-2024-01-20-at-1-17-15-am.png)
 ## Seamlessly integrate with both Django CMS and Wagtail to supercharge your content management experience.
 ![Logo](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*HrFLJCXTQrknxtdO2M6bMA.png)
-## Authors
 
-- [@dostogircse171](https://www.github.com/dostogircse171)
-- [@amitmodi06](https://www.github.com/amitmodi06)
+## Authors
+- Mohammad Golam Dostogir - [dostogircse171@domain.com](mailto:dostogircse171@domain.com)
+- Amit Kumar - [amitmodi06@domain.com](mailto:amitmodi06@domain.com)
 
 ## Features
 
