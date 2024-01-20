@@ -40,3 +40,18 @@ class TimeTable(models.Model):
         return f"{self.start_time} - {self.description}"
     class Meta:
         ordering = ['start_time']
+
+
+try:
+    from cms.models.pluginmodel import CMSPlugin
+    CMS_IS_INSTALLED = True
+    
+except ImportError:
+    CMS_IS_INSTALLED = False
+
+if CMS_IS_INSTALLED:
+    class EventPluginModel(CMSPlugin):
+        event = models.ForeignKey('django_events_timetable.Event', on_delete=models.CASCADE)
+
+        def __str__(self):
+            return self.event.name
