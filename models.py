@@ -33,8 +33,8 @@ class TimeTable(models.Model):
     start_time = models.TimeField(verbose_name="Start Time", help_text="When this will start")
     end_time = models.TimeField(verbose_name="End Time", help_text="When this will end", blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True)
-    title =models.CharField(max_length=70, verbose_name="Item Title", help_text="Event item title.")
-    description = models.TextField(verbose_name="Item Description", help_text="Event item description.", blank=True, null=True)
+    title =models.CharField(max_length=70, verbose_name="Whats happening", help_text="What is happening in this time?")
+    description = models.TextField(verbose_name="Description", help_text="Useful description about this time event.", blank=True, null=True)
 
     def __str__(self):
         return f"{self.start_time} - {self.description}"

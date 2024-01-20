@@ -1,7 +1,7 @@
 
 # Django Events Timetable (App Component)
 
-Django Events Timetable, is a valuable addition for any Django-based project, particularly for those requiring dynamic event management and scheduling capabilities. Its integration into Wagtail CMS, Django CMS further enhances its utility, making it a versatile tool for website development. This reusable app simplifies the creation and management of event timetables or schedules, offering customizable display options to fit the specific needs of your project. The availability of two default component elements, Light and Dark, along with a fully custom option, provides flexibility in design and functionality, ensuring that it can seamlessly integrate into various themes and layouts. This makes "Django Events Timetable" a highly adaptable solution for event listing and scheduling in Django applications.
+Django Events Timetable is an app component offering easy integration with Django, Django CMS, and Wagtail CMS. It features a user-friendly interface for managing event items, customizable and responsive templates with Dark and Light themes, and a color picker for design personalization. Designed to complement any project seamlessly, it is also extendable and customizable to meet specific needs.
 
 
 ![Logo](https://i.ibb.co/vXV3Pfd/Screenshot-2024-01-20-at-1-17-15-am.png)
@@ -40,7 +40,7 @@ Add the app to your `INSTALLED_APPS` in your Django project's `settings.py` or a
        'wagtail.contrib.modeladmin', # Add this only if you are installing it for Wagtail CMS if not already there.
    ]
    ```
-   ###### Note: `wagtail.contrib.modeladmin` this is important to add under INSTALLED_APPS if you are using the app on Wagtail CMS otherwise skip.
+   ***Note: `wagtail.contrib.modeladmin` this is important to add under INSTALLED_APPS if you are using the app on Wagtail CMS otherwise skip.***
 
 #### 1.3 Run Migrations
 Create and apply migrations specifically for the `django_events_timetable` app:
@@ -72,7 +72,7 @@ Add the following line to the `<head>` section of your base template (e.g., `bas
 ![wagtail](https://img001.prntscr.com/file/img001/SDQ3ZlX-SSuXHIfNSLn2SA.png)
 
 **2.2 Making Events:**
-To display a event and it's timetable content you need to create an event first. Consider this event as a `Group` and under this event group you can add as many event timetable as needed. Once you create an Events it will autogenerate a template tag for example `{% display_event "ID" %}` 
+To display an event and it's timetable content you need to create an event first. Consider this event as a `Group` and under this event group you can add as many event timetable as needed. Once you create an Events it will autogenerate a template tag for example `{% display_event "ID" %}` 
 
 ![wagtail](https://i.ibb.co/WggFkwV/events-model-demo.gif)
 
@@ -93,6 +93,10 @@ To display agenda items in your Django templates, first load the `dynamic_agenda
 #### 2.3.2 To show items from a specific event: `{% display_event "Event ID" %}` [This auto generates and can be copied from Events table "Display Tag"] ***[Replace "Event ID" with your specific event ID. You can use this tag multiple times in a single template as needed.]***
 
 #### 2.3.3. To limit the number of event items displayed you can limit by passing  an additional parameter items_limit like `items_limit=1` here Number: 1 is the number of event item you want to display.
+
+### Django CMS Plugin Placeholder Preview
+![plugin_placeholder](https://i.ibb.co/bd4dSfd/cms-plugin.gif)
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
