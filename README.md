@@ -25,8 +25,15 @@ Django Events Timetable is an app component offering easy integration with Djang
 
 
 ## 1. Installation
+You can install the django-events-timetable package in two ways:
 
-**1.1 Download/Clone the app repository to your Django project directory**
+**1.1 Using Pypi**
+
+```bash
+  pip install django-events-timetable
+```
+**Downloading/Cloning the Repository:**
+If you prefer, you can also download or clone the app repository directly to your Django project directory. Use the following git command to clone the repository:
 ```bash
   git clone https://github.com/dostogircse171/django_events_timetable.git
 ```
