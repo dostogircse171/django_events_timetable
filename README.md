@@ -4,7 +4,7 @@
 Django Events Timetable is an app component offering easy integration with Django, Django CMS, and Wagtail CMS. It features a user-friendly interface for managing event items, customizable and responsive templates with Dark and Light themes, and a color picker for design personalization. Designed to complement any project seamlessly, it is also extendable and customizable to meet specific needs.
 
 ![Logo](https://i.ibb.co/vXV3Pfd/Screenshot-2024-01-20-at-1-17-15-am.png)
-[![Design Demo](https://img.shields.io/badge/-Design%20Demo-blue?style=for-the-badge)](https://eventdemoapp-ceaa9c531c9c.herokuapp.com/)
+[![Event Demo](https://img.shields.io/badge/-Event%20Timetable%20Demo-blue?style=for-the-badge)](https://eventdemoapp-ceaa9c531c9c.herokuapp.com/)
 [![PyPi Project](https://img.shields.io/badge/-PyPi%20Project-blue?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/django-events-timetable/)
 
 
