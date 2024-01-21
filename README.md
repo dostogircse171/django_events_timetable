@@ -3,36 +3,47 @@
 
 Django Events Timetable is an app component offering easy integration with Django, Django CMS, and Wagtail CMS. It features a user-friendly interface for managing event items, customizable and responsive templates with Dark and Light themes, and a color picker for design personalization. Designed to complement any project seamlessly, it is also extendable and customizable to meet specific needs.
 
-
 ![Logo](https://i.ibb.co/vXV3Pfd/Screenshot-2024-01-20-at-1-17-15-am.png)
+[![Design Demo](https://img.shields.io/badge/-Design%20Demo-blue?style=for-the-badge)](https://eventdemoapp-ceaa9c531c9c.herokuapp.com/)
+[![PyPi Project](https://img.shields.io/badge/-PyPi%20Project-blue?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/django-events-timetable/)
+
+
+
 ## Seamlessly integrate with both Django CMS and Wagtail to supercharge your content management experience.
 ![Logo](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*HrFLJCXTQrknxtdO2M6bMA.png)
 
 ## Authors
 - Mohammad Golam Dostogir - [contact@dostogir.dev](mailto:contact@dostogir.dev)
-- Amit Kumar - [amitmodi06@gmail.com](mailto:mailto:amitmodi06@gmail.com)
+- Amit Kumar - [amitmodi06@gmail.com](mailto:amitmodi06@gmail.com)
 
-## Features
+## Key Features
 
-- Easy integration with Django projects, Django CMS or Wagtail CMS.
-- Placeholder Plugin for Django CMS.
-- Easy to Manage event items through Django admin or Wagtail CMS or Django CMS.
-- Grouping of event items for different events or pages.
-- Customizable display templates with 2 default Dark and Light designs.
-- Easy color picker for custom design.
-- Responsive and clean design will fit any project without affecting existing CSS or HTML design. 
-- The app is extendable and custiomizable as needed.
+- **Seamless Integration**: Effortlessly integrates with Django, Django CMS, and Wagtail CMS, ensuring a smooth workflow.
+- **Django CMS Compatibility**: Comes with a Placeholder Plugin specifically designed for Django CMS, enhancing content management capabilities.
+- **Efficient Management**: Simplifies the management of event items through the Django admin panel, Wagtail CMS, or Django CMS, offering a user-friendly interface.
+- **Organized Content**: Enables the grouping of event items, allowing for structured and organized display across different events or pages.
+- **Customizable Templates**: Includes customizable display templates with two default themes: Dark and Light, catering to different aesthetic preferences.
+- **Design Personalization**: Features an easy-to-use color picker, allowing for personalized design touches to match your project's theme.
+- **Responsive Design**: Boasts a responsive and clean design that adapts to various devices and screen sizes, ensuring compatibility and user-friendliness without interfering with existing CSS or HTML.
+- **Flexibility and Extensibility**: Designed to be extendable and customizable, meeting specific project requirements and allowing for future enhancements.
 
 
 ## 1. Installation
-You can install the django-events-timetable package in two ways:
+**1.1 You can install the django-events-timetable package in several ways:**
 
-**1.1 Using Pypi**
+**Using Pypi**
 
 ```bash
   pip install django-events-timetable
 ```
-**Downloading/Cloning the Repository:**
+
+**Using Poetry**
+
+```bash
+  poetry add django-events-timetable
+```
+
+**Downloading/Cloning the Repository**</br>
 If you prefer, you can also download or clone the app repository directly to your Django project directory. Use the following git command to clone the repository:
 ```bash
   git clone https://github.com/dostogircse171/django_events_timetable.git
